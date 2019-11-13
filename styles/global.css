@@ -1,0 +1,30 @@
+html {
+	--font-family: "Noto Sans", sans-serif;
+	--text-color: #00364a;
+	--border-radius: 3px;
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: 1rem;
+	line-height: 1.5em;
+	color: var(--text-color);
+}
+
+.screen-reader {
+	display: none;
+}
+
+.button {
+	display: inline-block;
+	padding: 0.75em 1em;
+	border: 2px solid var(--text-color);
+	border-radius: var(--border-radius);
+	background: transparent;
+	font-size: 0.9em;
+	font-weight: 700;
+	line-height: 1em;
+	color: var(--text-color);
+	text-decoration: none;
+	white-space: nowrap;
+}
