@@ -59,7 +59,7 @@ export const noAuthor = () => ({
 export const withEverything = () => ({
 	components: { ArticleSummary },
 	template: `<article-summary
-		authors="L P Ipsum, Commodo Consequat, Fugiat Pariatur, Reprehenderit Laboris, Exercitation Ullamco, Tempor Incididunt, Cupidatat al-Proident, Commodo Consequat, Fugiat Pariatur, Reprehenderit Laboris, Exercitation Ullamco, Tempor Incididunt, Cupidatat al-Proident"
+		authors="L P Ipsum, Commodo Consequat, Fugiat Pariatur, Reprehenderit Laboris, Exercitation Ullamco, Tempor Incididunt, Cupidatat al-Proident, Commodo Consequat, Fugiat Pariatur, Reprehenderit Laboris, Exercitation Ullamco, Tempor Incididunt, Cupidatat al-Proident, Commodo Consequat, Fugiat Pariatur, Reprehenderit Laboris, Exercitation Ullamco, Tempor Incididunt, Cupidatat al-Proident, Commodo Consequat, Fugiat Pariatur, Reprehenderit Laboris, Exercitation Ullamco, Tempor Incididunt, Cupidatat al-Proident"
 		cover-image-url="/900x600.png"
 		:galleys="['PDF', 'HTML', 'ePub']"
 		:id="1"
