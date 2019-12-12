@@ -1,5 +1,3 @@
-import { storiesOf } from '@storybook/vue';
-import Vue from 'vue';
 import { withKnobs, array, radios, text } from '@storybook/addon-knobs';
 import ArticleSummary from './ArticleSummary.vue';
 import notes from './ArticleSummary.md';
