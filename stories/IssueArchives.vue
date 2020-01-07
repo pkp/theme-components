@@ -1,14 +1,32 @@
 <template>
 	<div class="issue-archives">
 		<div class="tabs">
-		        <a v-on:click="activetab=1" v-bind:class="[ activetab === 1 ? 'active' : '' ]">2019</a>
-		        <a v-on:click="activetab=2" v-bind:class="[ activetab === 2 ? 'active' : '' ]">2018</a>
-		        <a v-on:click="activetab=3" v-bind:class="[ activetab === 3 ? 'active' : '' ]">2017</a>
-		        <a v-on:click="activetab=4" v-bind:class="[ activetab === 4 ? 'active' : '' ]">2016</a>
+			<a v-for="tab in archives"
+				v-on:click="activetab=tab.year"
+				:key="tab.year"
+				:id="'issue-archive-button-' + tab.year"
+			>
+				{{ tab.year }}
+			</a>
 		</div>
 		<div class="content">
 			<section class="issue-archives__tabs">
-				<section v-if="activetab === 1" class="tabcontent" id="tab1" aria-labelledby="tab1">
+				<template v-for="tab in archives">
+					<section
+						v-if="activetab === tab.year"
+						:key="tab.year"
+						class="tabcontent"
+						:id="'tab' + tab.year"
+						:aria-labelledby="'issue-archive-button-' + tab.year"
+					>
+						<issue-summary
+							v-for="issueSummary in tab.issues"
+							:key="issueSummary.volume"
+							v-bind="issueSummary"
+						/>
+					</section>
+				</template>
+				<!-- <section v-if="activetab === 1" class="tabcontent" id="tab1" aria-labelledby="tab1">
 					<issue-summary
 							volume="Vol 1, No 1"
 							title="Special Issue: On the Health of Health Science"
@@ -39,7 +57,7 @@
 					<div class="volume2">
 						<p><b>Vol 1, No 1</b><br />
 						<u>Advances in Research on Social Networking in Open and Distributed Learning</u><br />
-						<i>May 20, 2019</i></p>      
+						<i>May 20, 2019</i></p>
 					</div>
 				</section>
 				<section v-if="activetab === 3" class="tabcontent" id="tab3" aria-labelledby="tab3">
@@ -53,7 +71,7 @@
 					Spring</p>
 
 					<p><b>Vol 10, No 1</b><br />
-					Summer</p>  
+					Summer</p>
 				</section>
 				<section v-if="activetab === 4" class="tabcontent" id="tab4" aria-labelledby="tab4">
 					<p><b>Vol 10, No 4</b><br />
@@ -66,8 +84,8 @@
 					Spring</p>
 
 					<p><b>Vol 10, No 1</b><br />
-					Summer</p>  
-				</section>
+					Summer</p>
+				</section> -->
 			</section>
 		</div>
 	</div>
@@ -78,7 +96,17 @@ import IssueSummary from './IssueSummary.vue';
 
 export default {
 	components: { IssueSummary },
-	data: { activetab: 1 }	
+	props: {
+		archives: Object
+	},
+	data() {
+		return {
+			activetab: 0
+		};
+	},
+	mounted() {
+		this.activetab = this.archives[0].year;
+	}
 }
 </script>
 
@@ -123,7 +151,7 @@ body {
     background-color: #f1f1f1;
     font-weight: bold;
 }
-.tabs a:last-child { 
+.tabs a:last-child {
     border-right: 1px solid #ccc;
 }
 
