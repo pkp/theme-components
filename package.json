@@ -10,6 +10,7 @@
     "@storybook/addon-notes": "^5.2.6",
     "@storybook/addons": "^5.2.6",
     "@storybook/vue": "^5.2.6",
+    "@vue/devtools": "^5.3.3",
     "babel-loader": "^8.0.6",
     "babel-preset-vue": "^2.0.2",
     "vue": "^2.6.10",
@@ -17,7 +18,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "scripts": {
-    "storybook": "start-storybook -s ./public -p 6006",
+    "storybook": "STORYBOOK_VUE_DEV_TOOLS=1 start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook"
   },
   "repository": {

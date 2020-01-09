@@ -1,1 +1,9 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700,700italic" type="text/css" />
+<script type="text/javascript">
+	// Load standalone Vue.js dev tools in dev mode
+	if (%STORYBOOK_VUE_DEV_TOOLS%) {
+		const script = document.createElement('script');
+		script.src = 'http://localhost:8098';
+		document.head.appendChild(script);
+	}
+</script>
