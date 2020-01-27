@@ -4,7 +4,7 @@
             <div class="issue-summary__volume"><h2>{{ volume }}</h2></div>
             <div v-if="title" class="issue-summary__title">{{ title }}</div>
             <div class="issue-summary__date">{{ date }}</div>
-            <img v-if="image" :src="`/` + image" />
+            <div class="issue-summary__image"><img v-if="image" :src="`/` + image" /></div>
         </a>
     </div>
 </template>
@@ -26,7 +26,7 @@
     padding: 2rem 0;
 }
 
-.issue_summary__2019 {
+.issue-summary .issue_summary__2019 {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
@@ -46,33 +46,32 @@
 	font-size: 0.8rem;
 }
 
-.issue-summary__2019 img {
+.issue-summary__2019 .issue-summary__image img {
 	max-width: 100px;
 	float: right;
 }
 
 
-.issue_summary__2018 {
+.issue-summary__2018 {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
 }
 
-.issue_summary__2018 .issue-summary__volume h2 {
+.issue-summary__2018 .issue-summary__volume h2 {
 	font-size: 1rem;
 }
 
-.issue_summary__2018 .issue-summary__title {
+.issue-summary__2018 .issue-summary__title {
 	font-size: 0.9rem;
 }
 
-.issue_summary__2018 .issue-summary__date {
+.issue-summary__2018 .issue-summary__date {
 	font-size: 0.8rem;
 }
 
-.issue_summary__2018 img {
-	max-width: 100px;
-	float: right;
+.issue-summary__2018 .issue-summary__image img {
+	max-width: 200px;
 }
 
 .issue-summary .issue_summary__2017 {
@@ -81,35 +80,39 @@
 	align-content: flex-start;
 }
 
-.issue_summary__2017 .issue-summary__volume h2 {
+.issue-summary__2017 .issue-summary__volume h2 {
 	font-size: 0.9rem;
 }
 
-.issue_summary__2017 .issue-summary__title {
+.issue-summary__2017 .issue-summary__title {
 	font-size: 0.9rem;
 	font-style: italic;
 }
 
-.issue_summary__2017 .issue-summary__date {
+.issue-summary__2017 .issue-summary__date {
 	font-size: 0.8rem;
 }
 
 .issue-summary .issue_summary__2016 {
 	display: flex;
-	flex-wrap: wrap;
 }
 
-.issue_summary__2016 .issue-summary__volume h2 {
+.issue-summary__2016 .issue-summary__volume h2 {
 	font-size: 0.9rem;
 }
 
-.issue_summary__2016 .issue-summary__title {
+.issue-summary__2016 .issue-summary__title {
 	font-size: 0.9rem;
 	font-style: italic;
 }
 
-.issue_summary__2016 .issue-summary__date {
+.issue-summary__2016 .issue-summary__date {
 	font-size: 0.8rem;
+}
+
+.issue-summary__2016 .issue-summary__image img {
+	max-width: 100px;
+	float: left;
 }
 
 .issue-summary a {
@@ -128,10 +131,6 @@
 
 .issue-summary__date {
     font-style: italic;
-}
-
-img {
-	max-width: 250px;
 }
 
 </style>

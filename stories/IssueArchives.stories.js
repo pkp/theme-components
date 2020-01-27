@@ -31,7 +31,7 @@ const archives = [
                 volume: 'Vol 3, No 3',
                 title: 'The Difficult Second Issue',
                 date: 'May 28, 2019',
-                image: ''
+                image: 'cover_issue_23_en_US.png'
             },
         ]
     },
@@ -50,6 +50,18 @@ const archives = [
                 date: 'May 28, 2019',
                 image: ''
             },
+            {
+                volume: 'Vol 2, No 2',
+                title: 'Special Special Issue: On the Health of Health Science',
+                date: 'Nov 28, 2019',
+                image: ''
+            },
+            {
+                volume: 'Vol 2, No 1',
+                title: 'The More Difficult Second Issue',
+                date: 'May 28, 2019',
+                image: ''
+            },
         ]
     },
     {
@@ -59,13 +71,13 @@ const archives = [
                 volume: 'Vol 1, No 4',
                 title: 'Special Issue: On the Health of Health Science',
                 date: 'Nov 28, 2019',
-                image: ''
+                image: 'cover_issue_23_en_US.png'
             },
             {
                 volume: 'Vol 1, No 3',
                 title: 'The Difficult Second Issue',
                 date: 'May 28, 2019',
-                image: ''
+                image: 'cover_issue_23_en_US.png'
             },
         ]
     },
