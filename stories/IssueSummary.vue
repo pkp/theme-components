@@ -82,23 +82,34 @@
 }
 
 .issue_summary__2017 .issue-summary__volume h2 {
-	font-size: 1rem;
-	float: right;
+	font-size: 0.9rem;
 }
 
 .issue_summary__2017 .issue-summary__title {
 	font-size: 0.9rem;
-	float: right;
+	font-style: italic;
 }
 
 .issue_summary__2017 .issue-summary__date {
 	font-size: 0.8rem;
-	float: right;
 }
 
-.issue_summary__2017 img {
-	max-width: 100px;
-	float: left;
+.issue-summary .issue_summary__2016 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.issue_summary__2016 .issue-summary__volume h2 {
+	font-size: 0.9rem;
+}
+
+.issue_summary__2016 .issue-summary__title {
+	font-size: 0.9rem;
+	font-style: italic;
+}
+
+.issue_summary__2016 .issue-summary__date {
+	font-size: 0.8rem;
 }
 
 .issue-summary a {

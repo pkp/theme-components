@@ -42,7 +42,7 @@ const archives = [
                 volume: 'Vol 2, No 4',
                 title: 'Special Issue: On the Health of Health Science',
                 date: 'Nov 28, 2019',
-                image: 'cover_issue_23_en_US.png'
+                image: ''
             },
             {
                 volume: 'Vol 2, No 3',
@@ -59,7 +59,7 @@ const archives = [
                 volume: 'Vol 1, No 4',
                 title: 'Special Issue: On the Health of Health Science',
                 date: 'Nov 28, 2019',
-                image: 'cover_issue_19_en_US.png'
+                image: ''
             },
             {
                 volume: 'Vol 1, No 3',
