@@ -23,12 +23,82 @@
 <style>
 .issue-summary {
     display: flex;
-    flex-wrap: wrap;
     padding: 2rem 0;
 }
 
-.issue-summary__2019 {
-	color: #000;
+.issue_summary__2019 {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+}
+
+.issue-summary__2019 .issue-summary__volume h2 {
+	font-size: 1rem;
+}
+
+.issue-summary__2019 .issue-summary__title {
+	font-size: 0.9rem;
+}
+
+.issue-summary__2019 .issue-summary__date {
+	font-size: 0.8rem;
+}
+
+.issue-summary__2019 img {
+	max-width: 100px;
+	float: right;
+}
+
+
+.issue_summary__2018 {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.issue_summary__2018 .issue-summary__volume h2 {
+	font-size: 1rem;
+}
+
+.issue_summary__2018 .issue-summary__title {
+	font-size: 0.9rem;
+}
+
+.issue_summary__2018 .issue-summary__date {
+	font-size: 0.8rem;
+}
+
+.issue_summary__2018 img {
+	max-width: 100px;
+	float: right;
+}
+
+.issue-summary .issue_summary__2017 {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+.issue_summary__2017 .issue-summary__volume h2 {
+	font-size: 1rem;
+	float: right;
+}
+
+.issue_summary__2017 .issue-summary__title {
+	font-size: 0.9rem;
+	float: right;
+}
+
+.issue_summary__2017 .issue-summary__date {
+	font-size: 0.8rem;
+	float: right;
+}
+
+.issue_summary__2017 img {
+	max-width: 100px;
+	float: left;
 }
 
 .issue-summary a {
@@ -50,7 +120,7 @@
 }
 
 img {
-
+	max-width: 250px;
 }
 
 </style>
