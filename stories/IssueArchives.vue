@@ -3,14 +3,14 @@
         <div class="issue-archives__tabs">
             <ul>
                 <li>
-                    <a v-for="tab in archives"
+                    <button v-for="tab in archives"
                         @click="activetab = tab.year"
                         :key="tab.year"
                         :aria-selected="activetab === tab.year"
                         :id="'issue-archive-button-' + tab.year"
                     >
                         {{ tab.year }}
-                    </a>
+                    </button>
                 </li>
             </ul>
         </div>
@@ -96,14 +96,20 @@ body {
     display: inline-block;
 }
 
-.issue-archives__tabs a {
+.issue-archives__tabs button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
     padding: 0.8rem 1.7rem;
     font-weight: bold;
-    cursor: pointer;
     display: inline-block;
 }
 
-.issue-archives__tabs a:hover {
+.issue-archives__tabs button:hover {
     border-bottom: 2px solid;
 }
 
@@ -129,7 +135,7 @@ body {
 		padding: 0;
 	}
 
-	.issue-archives__tabs a {
+	.issue-archives__tabs button {
 	    padding: 0.5rem 1.2rem;
 	}
 
