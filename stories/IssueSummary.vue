@@ -2,7 +2,7 @@
 	<div class="issue-summary">
 		<ul>
 			<li>
-				<a class="button">
+				<button>
 					<div class="issue-summary__wrapper">
 						<div class="issue-summary__volume">
 							<h2>{{ volume }}</h2>
@@ -17,7 +17,7 @@
 							<img v-if="image" :src="`/` + image" class="issue-summary__cover-image" alt="The alt text entered by the user." />
 						</div>
 					</div>
-				</a>
+				</button>
 			</li>
 		</ul>
 	</div>
@@ -50,7 +50,7 @@
 	padding: 0;
 }
 
-.issue-summary a.button {
+.issue-summary button {
 	background: none;
 	color: inherit;
 	border: none;
@@ -60,6 +60,11 @@
 	outline: inherit;
     font-weight: bold;
     display: inline-block;
+    text-align: left;
+}
+
+.issue-summary_wrapper {
+	display: flex;
 }
 
 .issue-summary__title {
@@ -74,34 +79,13 @@
     font-size: 0.9rem;
 }
 
-.issue-summary__with-cover {
-	display: flex;
-}
-
 .issue-summary__cover-image-wrapper {
-    display: flex;
-    order: -1;
-    margin-right: 1rem;
+    margin-right: 1em;
 }
 
 .issue-summary__cover-image {
-    width: 30%;
+    max-width: 100px;
     height: auto;
-}
-
-@media (min-width: 300px) {
-
-    .issue-summary__cover-image-wrapper {
-        display: block;
-        flex: 0;
-        order: -1;
-        margin-right: 1rem;
-    }
-
-    .issue-summary__cover-image {
-        width: 30%;
-        height: auto;
-    }
 }
 
 </style>

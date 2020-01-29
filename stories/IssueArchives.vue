@@ -23,13 +23,11 @@
                         :id="'tab' + tab.year"
                         :aria-labelledby="'issue-archive-button-' + tab.year"
                     >
-                    <a>
-                        <issue-summary
-                            v-for="issueSummary in tab.issues"
-                            :key="issueSummary.volume"
-                            v-bind="issueSummary"
-                        />
-                    </a>
+                    <issue-summary
+                        v-for="issueSummary in tab.issues"
+                        :key="issueSummary.volume"
+                        v-bind="issueSummary"
+                    />
                     </section>
                 </template>
             </section>
