@@ -2,7 +2,8 @@ import IssueArchives from './IssueArchives.vue';
 
 const archives = [
     {
-        year: 2019,
+				year: 2019,
+				volume: 8,
         issues: [
             {
                 volume: 'Vol 4, No 4',
@@ -20,6 +21,7 @@ const archives = [
     },
     {
         year: 2018,
+				volume: 7,
         issues: [
             {
                 volume: 'Vol 3, No 4',
@@ -37,6 +39,7 @@ const archives = [
     },
     {
         year: 2017,
+				volume: 6,
         issues: [
             {
                 volume: 'Vol 2, No 4',
@@ -66,6 +69,7 @@ const archives = [
     },
     {
         year: 2016,
+				volume: 5,
         issues: [
             {
                 volume: 'Vol 1, No 4',
@@ -83,6 +87,7 @@ const archives = [
     },
     {
         year: 2015,
+				volume: 4,
         issues: [
             {
                 volume: 'Vol 4, No 4',
@@ -99,6 +104,7 @@ const archives = [
         ]
     },    {
         year: 2014,
+				volume: 3,
         issues: [
             {
                 volume: 'Vol 4, No 4',
@@ -115,6 +121,7 @@ const archives = [
         ]
     },    {
         year: 2013,
+				volume: 2,
         issues: [
             {
                 volume: 'Vol 4, No 4',
@@ -131,6 +138,7 @@ const archives = [
         ]
     },    {
         year: 2012,
+				volume: 1,
         issues: [
             {
                 volume: 'Vol 4, No 4',
@@ -145,7 +153,7 @@ const archives = [
                 image: 'cover_issue_23_en_US.png'
             },
         ]
-    },    
+    },
 ];
 
 export default {
