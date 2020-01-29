@@ -62,24 +62,6 @@
     display: inline-block;
 }
 
-.issue-summary.issue-summary__wrapper2019 {
-	display: flex;
-	flex-wrap: wrap;
-	align-content: flex-end;
-}
-
-.issue-summary.issue-summary__wrapper2018 {
-	display: flex;
-	align-content: flex-start;
-	flex: 0;
-}
-
-.issue-summary.issue-summary__wrapper2017 {
-	display: flex;
-	align-content: flex-start;
-	flex: 0;
-}
-
 .issue-summary__title {
 	font-size: 1.2rem;
 }

@@ -28,7 +28,6 @@
                             v-for="issueSummary in tab.issues"
                             :key="issueSummary.volume"
                             v-bind="issueSummary"
-                            :class="'issue-summary__wrapper' + tab.year"
                         />
                     </a>
                     </section>
