@@ -2,14 +2,17 @@
     <div class="issue-archives">
         <div class="issue-archives__tabs">
             <ul>
-                <li>
-                    <button v-for="tab in archives"
+                <li v-for="tab in archives" :key="tab.year">
+                    <button
                         @click="activetab = tab.year"
-                        :key="tab.year"
                         :aria-selected="activetab === tab.year"
                         :id="'issue-archive-button-' + tab.year"
                     >
                         {{ tab.year }}
+												<span class="issue-archives__button--volume">
+													—
+													Volume {{ tab.volume }}
+												</span>
                     </button>
                 </li>
             </ul>
@@ -73,13 +76,10 @@ body {
     padding: 0 2rem;
 }
 
-.issue-archives__tabs {
+.issue-archives__tabs ul {
     display: flex;
     flex-wrap: nowrap;
-    overflow: hidden;
-}
-
-.issue-archives__tabs ul {
+    overflow: scroll;
     list-style-type: none;
     border-bottom: 1px solid;
     margin: 0;
@@ -123,7 +123,50 @@ body {
     cursor: default;
 }
 
-@media (max-width: 783px) {
+.issue-archives__button--volume {
+	display: none;
+}
+
+@media (min-width: 767px) {
+
+	.issue-archives {
+		display: flex;
+	}
+
+	.issue-archives__tabs ul {
+		display: block;
+		overflow: visible;
+		min-width: 18rem;
+	}
+
+	.issue-archives__tabs li {
+		display: block;
+		float: none;
+	}
+
+	.issue-archives__tabs button {
+		display: block;
+		width: 100%;
+		border-left: 2px solid transparent;
+		text-align: left;
+	}
+
+	.issue-archives__tabs [aria-selected],
+	.issue-archives__tabs button:hover {
+		border-bottom: none;
+		border-left: 2px solid;
+	}
+
+	.issue-archives__tabs ul {
+		border-bottom: none;
+	}
+
+	.issue-archives__button--volume {
+		display: inline;
+	}
+}
+
+@media (max-width: 767px) {
 
 	body {
 		margin: 0.2rem;
