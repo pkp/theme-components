@@ -1,12 +1,26 @@
 <template>
-    <div class="issue-summary">
-        <a href="">
-            <div class="issue-summary__volume"><h2>{{ volume }}</h2></div>
-            <div v-if="title" class="issue-summary__title">{{ title }}</div>
-            <div class="issue-summary__date">{{ date }}</div>
-            <div class="issue-summary__image"><img v-if="image" :src="`/` + image" /></div>
-        </a>
-    </div>
+	<div class="issue-summary">
+		<ul>
+			<li>
+				<a class="button">
+					<div class="issue-summary__wrapper">
+						<div class="issue-summary__volume">
+							<h2>{{ volume }}</h2>
+						</div>
+						<div v-if="title" class="issue-summary__title">
+							{{ title }}
+						</div>
+						<div v-if="date" class="issue-summary__date">
+							{{ date }}
+						</div>
+						<div class="issue-summary__cover-image-wrapper">
+							<img v-if="image" :src="`/` + image" class="issue-summary__cover-image" alt="The alt text entered by the user." />
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
 </template>
 
 <script>
@@ -22,115 +36,90 @@
 
 <style>
 .issue-summary {
-    display: flex;
     padding: 2rem 0;
 }
 
-.issue-summary .issue_summary__2019 {
-	width: 100%;
+.issue-summary ul {
+	padding: 0;
+	margin: 0;
+}
+
+.issue-summary li {
+	list-style-type: none;
+	border: 0;
+	padding: 0;
+}
+
+.issue-summary a.button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.issue-summary.issue-summary__wrapper2019 {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	align-content: flex-start;
+	align-content: flex-end;
 }
 
-.issue-summary__2019 .issue-summary__volume h2 {
-	font-size: 1rem;
-}
-
-.issue-summary__2019 .issue-summary__title {
-	font-size: 0.9rem;
-}
-
-.issue-summary__2019 .issue-summary__date {
-	font-size: 0.8rem;
-}
-
-.issue-summary__2019 .issue-summary__image img {
-	max-width: 100px;
-	float: right;
-}
-
-
-.issue-summary__2018 {
+.issue-summary.issue-summary__wrapper2018 {
 	display: flex;
-	flex-wrap: wrap;
 	align-content: flex-start;
+	flex: 0;
 }
 
-.issue-summary__2018 .issue-summary__volume h2 {
-	font-size: 1rem;
-}
-
-.issue-summary__2018 .issue-summary__title {
-	font-size: 0.9rem;
-}
-
-.issue-summary__2018 .issue-summary__date {
-	font-size: 0.8rem;
-}
-
-.issue-summary__2018 .issue-summary__image img {
-	max-width: 200px;
-}
-
-.issue-summary .issue_summary__2017 {
+.issue-summary.issue-summary__wrapper2017 {
 	display: flex;
-	flex-wrap: wrap;
 	align-content: flex-start;
+	flex: 0;
 }
 
-.issue-summary__2017 .issue-summary__volume h2 {
-	font-size: 0.9rem;
-}
-
-.issue-summary__2017 .issue-summary__title {
-	font-size: 0.9rem;
-	font-style: italic;
-}
-
-.issue-summary__2017 .issue-summary__date {
-	font-size: 0.8rem;
-}
-
-.issue-summary .issue_summary__2016 {
-	display: flex;
-}
-
-.issue-summary__2016 .issue-summary__volume h2 {
-	font-size: 0.9rem;
-}
-
-.issue-summary__2016 .issue-summary__title {
-	font-size: 0.9rem;
-	font-style: italic;
-}
-
-.issue-summary__2016 .issue-summary__date {
-	font-size: 0.8rem;
-}
-
-.issue-summary__2016 .issue-summary__image img {
-	max-width: 100px;
-	float: left;
-}
-
-.issue-summary a {
-    text-decoration: none;
-    cursor: hand;
+.issue-summary__title {
+	font-size: 1.2rem;
 }
 
 .issue-summary__volume h2 {
     font-size: 1.4rem;
 }
 
-.issue-summary__title {
-    flex-basis: auto;
-    font-weight: bold;
+.issue-summary__date {
+    font-size: 0.9rem;
 }
 
-.issue-summary__date {
-    font-style: italic;
+.issue-summary__with-cover {
+	display: flex;
+}
+
+.issue-summary__cover-image-wrapper {
+    display: flex;
+    order: -1;
+    margin-right: 1rem;
+}
+
+.issue-summary__cover-image {
+    width: 30%;
+    height: auto;
+}
+
+@media (min-width: 300px) {
+
+    .issue-summary__cover-image-wrapper {
+        display: block;
+        flex: 0;
+        order: -1;
+        margin-right: 1rem;
+    }
+
+    .issue-summary__cover-image {
+        width: 30%;
+        height: auto;
+    }
 }
 
 </style>

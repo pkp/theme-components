@@ -28,7 +28,7 @@
                             v-for="issueSummary in tab.issues"
                             :key="issueSummary.volume"
                             v-bind="issueSummary"
-                            :class="'issue-summary__' + tab.year"
+                            :class="'issue-summary__wrapper' + tab.year"
                         />
                     </a>
                     </section>
@@ -100,7 +100,6 @@ body {
 	background: none;
 	color: inherit;
 	border: none;
-	padding: 0;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
@@ -123,7 +122,6 @@ body {
 }
 
 .issue-archives__tabs [aria-selected] {
-    color: #484848;
     border-bottom: 2px solid;
     cursor: default;
 }
