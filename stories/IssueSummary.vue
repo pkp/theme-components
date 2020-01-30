@@ -1,15 +1,15 @@
 <template>
 	<div class="issue-summary">
-					<div class="issue-summary__wrapper">
-						<h2 class="issue-summary__volume">Vol {{ volume }}, No {{ number }}</h2>
-						<div v-if="title" class="issue-summary__title">
-							{{ title }}
-						</div>
-						<div v-if="date" class="issue-summary__date">
-							{{ date }}
-						</div>
-						<img v-if="image" :src="image" class="issue-summary__cover-image" alt="The alt text entered by the user." />
-					</div>
+		<div class="issue-summary__wrapper">
+			<h2 class="issue-summary__volume">Vol {{ volume }}, No {{ number }}</h2>
+			<div v-if="title" class="issue-summary__title">
+				{{ title }}
+			</div>
+			<div v-if="date" class="issue-summary__date">
+				{{ date }}
+			</div>
+			<img v-if="image" :src="image" class="issue-summary__cover-image" alt="The alt text entered by the user." />
+		</div>
 	</div>
 </template>
 
@@ -25,17 +25,19 @@ export default {
     }
 </script>
 
-<style>
+<style lang="css">
 .issue-summary {
-  margin: 3rem 0;
+	margin: 0;
+	padding-bottom: 1rem;
 }
 
 .issue-summary__title {
 	font-size: 0.9rem;
 }
 
-.issue-summary__volume h2 {
+h2 {
 	margin: 0;
+	padding: 0.4rem 0;
     font-size: 1rem;
 }
 
