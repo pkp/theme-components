@@ -1,173 +1,75 @@
-import IssueArchives from './IssueArchives.vue';
+import IssueArchives from "./IssueArchives.vue";
+import notes from "./IssueArchives.md";
+import issues from "./data/issues.js";
 
 const archives = [
-    {
-				year: 2019,
-				volume: 8,
-        issues: [
-            {
-                volume: 'Vol 4, No 4',
-                title: 'Cost-savings achieved in two semesters through the adoption of open educational resources ',
-                date: 'Nov 28, 2019',
-                image: 'cover_issue_19_en_US.png'
-            },
-            {
-                volume: 'Vol 4, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-        ]
-    },
-    {
-        year: 2018,
-				volume: 7,
-        issues: [
-            {
-                volume: 'Vol 3, No 4',
-                title: 'Special Issue: On the Health of Health Science',
-                date: 'Nov 28, 2019',
-                image: 'cover_issue_24_en_US.png'
-            },
-            {
-                volume: 'Vol 3, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-        ]
-    },
-    {
-        year: 2017,
-				volume: 6,
-        issues: [
-            {
-                volume: 'Vol 2, No 4',
-                title: 'Special Issue: On the Health of Health Science',
-                date: 'Nov 28, 2019',
-                image: ''
-            },
-            {
-                volume: 'Vol 2, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: ''
-            },
-            {
-                volume: 'Vol 2, No 2',
-                title: 'Special Special Issue: On the Health of Health Science',
-                date: 'Nov 28, 2019',
-                image: ''
-            },
-            {
-                volume: 'Vol 2, No 1',
-                title: 'The More Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: ''
-            },
-        ]
-    },
-    {
-        year: 2016,
-				volume: 5,
-        issues: [
-            {
-                volume: 'Vol 1, No 4',
-                title: 'Special Issue: On the Health of Health Science',
-                date: 'Nov 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-            {
-                volume: 'Vol 1, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-        ]
-    },
-    {
-        year: 2015,
-				volume: 4,
-        issues: [
-            {
-                volume: 'Vol 4, No 4',
-                title: 'Cost-savings achieved in two semesters through the adoption of open educational resources ',
-                date: 'Nov 28, 2019',
-                image: 'cover_issue_19_en_US.png'
-            },
-            {
-                volume: 'Vol 4, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-        ]
-    },    {
-        year: 2014,
-				volume: 3,
-        issues: [
-            {
-                volume: 'Vol 4, No 4',
-                title: 'Cost-savings achieved in two semesters through the adoption of open educational resources ',
-                date: 'Nov 28, 2019',
-                image: 'cover_issue_19_en_US.png'
-            },
-            {
-                volume: 'Vol 4, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-        ]
-    },    {
-        year: 2013,
-				volume: 2,
-        issues: [
-            {
-                volume: 'Vol 4, No 4',
-                title: 'Cost-savings achieved in two semesters through the adoption of open educational resources ',
-                date: 'Nov 28, 2019',
-                image: 'cover_issue_19_en_US.png'
-            },
-            {
-                volume: 'Vol 4, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-        ]
-    },    {
-        year: 2012,
-				volume: 1,
-        issues: [
-            {
-                volume: 'Vol 4, No 4',
-                title: 'Cost-savings achieved in two semesters through the adoption of open educational resources ',
-                date: 'Nov 28, 2019',
-                image: 'cover_issue_19_en_US.png'
-            },
-            {
-                volume: 'Vol 4, No 3',
-                title: 'The Difficult Second Issue',
-                date: 'May 28, 2019',
-                image: 'cover_issue_23_en_US.png'
-            },
-        ]
-    },
+  {
+    year: 2019,
+    volume: 10,
+    issues: issues.filter(issue => issue.year === 2019)
+  },
+  {
+    year: 2018,
+    volume: 9,
+    issues: issues.filter(issue => issue.year === 2018)
+  },
+  {
+    year: 2017,
+    volume: 8,
+    issues: issues.filter(issue => issue.year === 2017)
+  },
+  {
+    year: 2016,
+    volume: 7,
+    issues: issues.filter(issue => issue.year === 2016)
+  },
+  {
+    year: 2015,
+    volume: 6,
+    issues: issues.filter(issue => issue.year === 2015)
+  },
+  {
+    year: 2014,
+    volume: 5,
+    issues: issues.filter(issue => issue.year === 2014)
+  },
+  {
+    year: 2013,
+    volume: 4,
+    issues: issues.filter(issue => issue.year === 2013)
+  },
+  {
+    year: 2012,
+    volume: 3,
+    issues: issues.filter(issue => issue.year === 2012)
+  },
+  {
+    year: 2011,
+    volume: 2,
+    issues: issues.filter(issue => issue.year === 2011)
+  },
+  {
+    year: 2010,
+    volume: 1,
+    issues: issues.filter(issue => issue.year === 2010)
+  }
 ];
 
 export default {
-    title: 'IssueArchives'
+  title: "IssueArchives",
+  parameters: {
+    notes: notes
+  }
 };
 
 export const base = () => ({
-    components: { IssueArchives },
-    props: {
-        archives: {
-            default: archives
-        }
-    },
-    template: `<issue-archives
-        :archives="archives"
-    />`
+  components: { IssueArchives },
+  props: {
+    archives: {
+      default: archives
+    }
+  },
+  template: `<issue-archives
+			:archives="archives"
+	/>`
 });

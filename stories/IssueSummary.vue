@@ -2,7 +2,7 @@
 	<div class="issue-summary">
 					<div class="issue-summary__wrapper">
 						<div class="issue-summary__volume">
-							<h2>{{ volume }}</h2>
+							<h2>Vol {{ volume }}, No {{ number }}</h2>
 						</div>
 						<div v-if="title" class="issue-summary__title">
 							{{ title }}
@@ -10,7 +10,7 @@
 						<div v-if="date" class="issue-summary__date">
 							{{ date }}
 						</div>
-						<img v-if="image" :src="`/` + image" class="issue-summary__cover-image" alt="The alt text entered by the user." />
+						<img v-if="image" :src="image" class="issue-summary__cover-image" alt="The alt text entered by the user." />
 					</div>
 	</div>
 </template>
@@ -18,7 +18,8 @@
 <script>
     export default {
         props: {
-            volume: String,
+						volume: Number,
+						number: Number,
             title: String,
             date: String,
             image: String
