@@ -16,8 +16,8 @@
 <script>
 export default {
         props: {
-						volume: Number,
-						number: Number,
+			volume: Number,
+			number: Number,
             title: String,
             date: String,
             image: String
