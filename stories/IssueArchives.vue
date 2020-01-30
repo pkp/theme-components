@@ -10,10 +10,9 @@
                         :id="'issue-archive-button-' + tab.year"
 												type="button"
                     >
-                        {{ tab.year }}
-												<span class="issue-archives__button-text--volume">
-													—	Volume {{ tab.volume }}
-												</span>
+												<span class="issue-archives__button-text--year">{{ tab.year }}</span>
+												<span class="issue-archives__button-text--separator">—</span>
+												<span class="issue-archives__button-text--volume">Volume {{ tab.volume }}</span>
                     </button>
                 </li>
             </ul>
@@ -88,6 +87,7 @@ export default {
 	outline: none;
 }
 
+.issue-archives__button-text--separator,
 .issue-archives__button-text--volume {
 	display: none;
 }
@@ -104,10 +104,12 @@ export default {
 
 	.issue-archives__tabs-list {
 		display: block;
-		min-width: 18rem;
+		min-width: 13rem;
+		margin-right: 3rem;
 	}
 
 	.issue-archives__button {
+		position: relative;
 		width: 100%;
 		border-bottom: none;
 		border-left: 2px solid transparent;
@@ -123,8 +125,32 @@ export default {
 		border-left: 2px solid;
 	}
 
+	.issue-archives__button-text--year {
+		position: relative;
+		padding-right: 0.5em;
+		background: var(--background-color);
+		z-index: 2;
+	}
+
+	.issue-archives__button-text--separator {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 1rem;
+		right: 1rem;
+		height: 1px;
+		overflow: hidden;
+		border-top: 1px solid;
+		z-index: -1;
+		opacity: 0.3;
+	}
+
 	.issue-archives__button-text--volume {
-		display: inline;
+		display: block;
+		position: relative;
+		float: right;
+		padding-left: 0.5em;
+		background: var(--background-color);
 		font-weight: normal;
 	}
 }

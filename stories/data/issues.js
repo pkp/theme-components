@@ -1,6 +1,6 @@
 export default [
   {
-		volume: 8,
+		volume: 30,
 		number: 4,
 		year: 2019,
 		title: "Multilingual Finnic – Language contact and change",
@@ -8,7 +8,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 8,
+		volume: 30,
 		number: 3,
 		year: 2019,
 		title: "Multilingual Practices in Finno-Ugric Communities",
@@ -16,7 +16,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 8,
+		volume: 30,
 		number: 2,
 		year: 2019,
 		title: "Personal Name Systems in Finnic and Beyond",
@@ -24,7 +24,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 8,
+		volume: 30,
 		number: 1,
 		year: 2019,
 		title: "Peri orthotētos etymōn – Uusiutuva uralilainen etymologia",
@@ -32,7 +32,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 7,
+		volume: 9,
 		number: 4,
 		year: 2018,
 		title: "Mordvin languages in the field",
@@ -40,7 +40,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 7,
+		volume: 9,
 		number: 3,
 		year: 2018,
 		title: "Kuávsui já peeivičuovâ 'Sarastus ja päivänvalo' – Inarinsaamen revitalisaatio",
@@ -48,7 +48,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 7,
+		volume: 9,
 		number: 2,
 		year: 2018,
 		title: "Culture, Language and Globalization among the Moldavian Csángós Today",
@@ -56,7 +56,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 7,
+		volume: 9,
 		number: 1,
 		year: 2018,
 		title: "Contacts between the Baltic and Finnic languages",
@@ -64,7 +64,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 6,
+		volume: 8,
 		number: 1,
 		year: 2017,
 		title: "An Official Status for Minority Languages? A Study of State Languages in Russia's Finno-Ugric Republics",
@@ -72,7 +72,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 8,
 		year: 2016,
 		title: "Ethnic and Linguistic Context of Identity: Finno-Ugric Minorities",
@@ -80,7 +80,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 7,
 		year: 2016,
 		title: "Kenttäretkistä tutkimustiedoksi",
@@ -88,7 +88,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 6,
 		year: 2016,
 		title: "Murros – suomalais-ugrilaiset kielet ja kulttuurit globalisaation paineissa",
@@ -96,7 +96,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 5,
 		year: 2016,
 		title: "Unkarilaisten omakuvan juuret – keski- ja uuden ajan Unkarin historiankirjoituksen tekstejä (Folia Hungarica 13)",
@@ -104,7 +104,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 4,
 		year: 2016,
 		title: "Lähivertailuja 18",
@@ -112,7 +112,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 3,
 		year: 2016,
 		title: "Musiikki- ja äänitetuotanto sekä muuttuvat tuotantoteknologiat ja toimintaympäristöt ",
@@ -120,7 +120,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 2,
 		year: 2016,
 		title: "",
@@ -128,7 +128,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 5,
+		volume: 7,
 		number: 1,
 		year: 2016,
 		title: "",
@@ -136,7 +136,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 4,
+		volume: 6,
 		number: 3,
 		year: 2015,
 		title: "",
@@ -144,7 +144,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 4,
+		volume: 6,
 		number: 2,
 		year: 2015,
 		title: "Teknologian historian monet tarinat",
@@ -152,7 +152,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 4,
+		volume: 6,
 		number: 1,
 		year: 2015,
 		title: "",
@@ -160,7 +160,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 3,
+		volume: 5,
 		number: 4,
 		year: 2014,
 		title: "",
@@ -168,7 +168,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 3,
+		volume: 5,
 		number: 3,
 		year: 2014,
 		title: "",
@@ -176,7 +176,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 3,
+		volume: 5,
 		number: 2,
 		year: 2014,
 		title: "Sodan ja turvallisuuden teknologiat",
@@ -184,7 +184,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 3,
+		volume: 5,
 		number: 1,
 		year: 2014,
 		title: "",
@@ -192,7 +192,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 2,
+		volume: 4,
 		number: 3,
 		year: 2013,
 		title: "Media-arkeologia – uuden ja vanhan median rajapinnalla",
@@ -200,7 +200,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 2,
+		volume: 4,
 		number: 2,
 		year: 2013,
 		title: "",
@@ -208,7 +208,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 2,
+		volume: 4,
 		number: 1,
 		year: 2013,
 		title: "Teolliset paikkakunnat",
@@ -216,7 +216,7 @@ export default [
 		image: "/issue-cover.jpg"
 	},
   {
-		volume: 2,
+		volume: 4,
 		number: 3,
 		year: 2013,
 		title: "",
@@ -224,7 +224,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 1,
+		volume: 3,
 		number: 4,
 		year: 2012,
 		title: "",
@@ -232,7 +232,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 1,
+		volume: 3,
 		number: 3,
 		year: 2012,
 		title: "",
@@ -240,7 +240,7 @@ export default [
 		image: ""
 	},
   {
-		volume: 1,
+		volume: 3,
 		number: 2,
 		year: 2012,
 		title: "",
@@ -248,11 +248,43 @@ export default [
 		image: ""
 	},
   {
-		volume: 1,
+		volume: 3,
 		number: 1,
 		year: 2012,
 		title: "",
 		date: "Jan 30, 2012",
+		image: ""
+	},
+  {
+		volume: 2,
+		number: 2,
+		year: 2011,
+		title: "",
+		date: "July 21, 2011",
+		image: ""
+	},
+  {
+		volume: 2,
+		number: 1,
+		year: 2011,
+		title: "",
+		date: "Jan 6, 2011",
+		image: ""
+	},
+  {
+		volume: 1,
+		number: 2,
+		year: 2010,
+		title: "",
+		date: "Aug 8, 2010",
+		image: ""
+	},
+  {
+		volume: 1,
+		number: 1,
+		year: 2010,
+		title: "",
+		date: "Mar 23, 2010",
 		image: ""
 	},
 ];
