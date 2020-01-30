@@ -2,7 +2,7 @@
     <div class="issue-archives">
 				<div class="issue-archives__tabs">
             <ul class="issue-archives__tabs-list">
-                <li v-for="tab in archives" :key="tab.year" class="issue-archives__tabs-list-item">
+                <li v-for="tab in archives" :key="tab.year + tab.volume" class="issue-archives__tabs-list-item">
                     <button
 												class="issue-archives__button"
                         @click="activetab = tab.year"
@@ -21,14 +21,14 @@
         <div class="issue-archives__tab-panels">
 					<section
 							v-for="tab in archives"
-							:key="tab.year"
+							:key="tab.year + tab.volume"
 							:aria-labelledby="'issue-archive-button-' + tab.year"
 							class="issue-archives__tab-panel"
 							:hidden="activetab !== tab.year"
 					>
 						<issue-summary
 								v-for="issueSummary in tab.issues"
-								:key="issueSummary.volume"
+								:key="issueSummary.volume + issueSummary.year"
 								v-bind="issueSummary"
 						/>
 					</section>
