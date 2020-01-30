@@ -8,6 +8,8 @@
 			<div v-if="date" class="issue-summary__date">
 				{{ date }}
 			</div>
+		</div>
+		<div class="issue-summary__cover-image-wrapper">
 			<img v-if="image" :src="image" class="issue-summary__cover-image" alt="The alt text entered by the user." />
 		</div>
 	</div>
@@ -29,6 +31,12 @@ export default {
 .issue-summary {
 	margin: 0;
 	padding-bottom: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.issue-summary__cover-image-wrapper {
+	padding: 0.5rem 1rem;
 }
 
 .issue-summary__title {
