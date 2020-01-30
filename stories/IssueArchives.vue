@@ -1,36 +1,36 @@
 <template>
     <div class="issue-archives">
-				<div class="issue-archives__tabs">
+		<div class="issue-archives__tabs">
             <ul class="issue-archives__tabs-list">
                 <li v-for="tab in archives" :key="tab.year + tab.volume" class="issue-archives__tabs-list-item">
                     <button
-												class="issue-archives__button"
+						class="issue-archives__button"
                         @click="activeTab = tab"
                         :aria-selected="activeTab.year === tab.year"
                         :id="'issue-archive-button-' + tab.year"
-												type="button"
+						type="button"
                     >
-												<span class="issue-archives__button-text--year">{{ tab.year }}</span>
-												<span class="issue-archives__button-text--separator">—</span>
-												<span class="issue-archives__button-text--volume">Volume {{ tab.volume }}</span>
+						<span class="issue-archives__button-text--year">{{ tab.year }}</span>
+						<span class="issue-archives__button-text--separator">—</span>
+						<span class="issue-archives__button-text--volume">Volume {{ tab.volume }}</span>
                     </button>
                 </li>
             </ul>
 				</div>
         <div class="issue-archives__tab-panels">
-					<section
-							v-for="tab in archives"
-							:key="tab.year + tab.volume"
-							:aria-labelledby="'issue-archive-button-' + tab.year"
-							class="issue-archives__tab-panel"
-							:hidden="activeTab !== tab.year"
-					>
-						<issue-summary
-								v-for="issueSummary in tab.issues"
-								:key="issueSummary.volume + issueSummary.year"
-								v-bind="issueSummary"
-						/>
-					</section>
+			<section
+					v-for="tab in archives"
+					:key="tab.year + tab.volume"
+					:aria-labelledby="'issue-archives__button' + tab.year"
+					class="issue-archives__tab-panels"
+					:hidden="activeTab.year !== tab.year"
+			>
+				<issue-summary
+						v-for="issueSummary in tab.issues"
+						:key="issueSummary.volume + issueSummary.year"
+						v-bind="issueSummary"
+				/>
+			</section>
         </div>
     </div>
 </template>
@@ -62,13 +62,13 @@ export default {
 .issue-archives__tabs-list {
     display: flex;
     flex-wrap: nowrap;
-		overflow: hidden;
+	overflow: hidden;
     margin: 0;
     padding: 0;
 }
 
 .issue-archives__tabs-list-item {
-  list-style-type: none;
+	list-style-type: none;
 }
 
 .issue-archives__button {
