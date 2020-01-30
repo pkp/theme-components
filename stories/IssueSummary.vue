@@ -1,9 +1,7 @@
 <template>
 	<div class="issue-summary">
 					<div class="issue-summary__wrapper">
-						<div class="issue-summary__volume">
-							<h2>Vol {{ volume }}, No {{ number }}</h2>
-						</div>
+						<h2 class="issue-summary__volume">{{ volume }}, No {{ number }}</h2>
 						<div v-if="title" class="issue-summary__title">
 							{{ title }}
 						</div>
@@ -16,7 +14,7 @@
 </template>
 
 <script>
-    export default {
+export default {
         props: {
 						volume: Number,
 						number: Number,

@@ -5,8 +5,8 @@
                 <li v-for="tab in archives" :key="tab.year + tab.volume" class="issue-archives__tabs-list-item">
                     <button
 												class="issue-archives__button"
-                        @click="activetab = tab.year"
-                        :aria-selected="activetab === tab.year"
+                        @click="activeTab = tab"
+                        :aria-selected="activeTab.year === tab.year"
                         :id="'issue-archive-button-' + tab.year"
 												type="button"
                     >
@@ -23,7 +23,7 @@
 							:key="tab.year + tab.volume"
 							:aria-labelledby="'issue-archive-button-' + tab.year"
 							class="issue-archives__tab-panel"
-							:hidden="activetab !== tab.year"
+							:hidden="activeTab !== tab.year"
 					>
 						<issue-summary
 								v-for="issueSummary in tab.issues"
@@ -45,11 +45,11 @@ export default {
     },
     data() {
         return {
-            activetab: 0
+            activeTab: 0
         };
     },
     mounted() {
-        this.activetab = this.archives[0].year;
+        this.activeTab = this.archives[0];
     }
 }
 </script>
