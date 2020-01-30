@@ -7,7 +7,7 @@
 						class="issue-archives__button"
                         @click="activeTab = tab"
                         :aria-selected="activeTab.year === tab.year"
-                        :id="'issue-archive-button-' + tab.year"
+                        :id="'issue-archive__button-' + tab.year"
 						type="button"
                     >
 						<span class="issue-archives__button-text--year">{{ tab.year }}</span>
