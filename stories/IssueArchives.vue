@@ -78,7 +78,7 @@ export default {
 
 .issue-archives__header-form {
 	width: 2rem;
-	margin: 1rem auto;
+	margin: 0.5rem auto;
 	display: flex;
 }
 
@@ -90,7 +90,7 @@ export default {
 
 .issue-archives__header-button {
 	position: relative;
-	padding: 0.5rem;
+	padding: 0.2rem;
 	left: -0.2rem;
 	border: 2px solid;
 }
@@ -146,12 +146,12 @@ export default {
 	.issue-archives__tabs, .issue-archives__tab-panels { flex: 1 auto; padding: 1rem; }
 	.issue-archives__header { order: 1; }
 	.issue-archives__tabs { order: 2; }
-	.issue-archives__tab-panels { order: 3; padding: 1rem 2rem; }
+	.issue-archives__tab-panels { order: 3; padding: 1rem 0 1rem 2rem; }
 
 	.issue-archives__header {
 		display: flex;
 		flex-flow: row wrap;
-		align-items: center;
+		align-items: flex-end;
 		border-bottom: 1px solid;
 	}
 
@@ -167,6 +167,9 @@ export default {
 	.issue-archives__header-title { order: 1; }
 	.issue-archives__header-search { order: 2; }
 
+	.issue-archives__header-form {
+		align-items: self-end;
+	}
 
 	.issue-archives__tabs {
 		border-bottom: none;
