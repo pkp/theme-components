@@ -156,6 +156,11 @@ export default {
 		align-items: center;
 	}
 
+	.issue-archives__header-search {
+		margin: 0;
+		padding: 0;
+	}
+
 	.issue-archives__header > * {
 		flex: 1 0;
 	}
