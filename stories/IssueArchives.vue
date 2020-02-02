@@ -33,7 +33,6 @@
 					v-for="tab in archives"
 					:key="tab.year + tab.volume"
 					:aria-labelledby="'issue-archives__button' + tab.year"
-					class="issue-archives__tab-panels"
 					:hidden="activeTab.year !== tab.year"
 			>
 				<issue-summary
@@ -141,19 +140,19 @@ export default {
 	}
 
 	.issue-archives > * {
-	  padding: 0 1rem;
 	  flex: 1 100%;
 	}
 
-	.issue-archives__tabs, .issue-archives__tab-panels { flex: 1 auto; }
+	.issue-archives__tabs, .issue-archives__tab-panels { flex: 1 auto; padding: 1rem; }
 	.issue-archives__header { order: 1; }
 	.issue-archives__tabs { order: 2; }
-	.issue-archives__tab-panels { order: 3; }
+	.issue-archives__tab-panels { order: 3; padding: 1rem 2rem; }
 
 	.issue-archives__header {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
+		border-bottom: 1px solid;
 	}
 
 	.issue-archives__header-search {
@@ -171,12 +170,13 @@ export default {
 
 	.issue-archives__tabs {
 		border-bottom: none;
+		border-right: 1px solid;
 	}
 
 	.issue-archives__tabs-list {
 		display: block;
-		min-width: 13rem;
-		margin-right: 3rem;
+		min-width: 12rem;
+		margin-right: 0.5rem;
 	}
 
 	.issue-archives__button {
