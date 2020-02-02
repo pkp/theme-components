@@ -1,5 +1,16 @@
 <template>
     <div class="issue-archives">
+    	<div class="issue-archives__header">
+    		<div class="issue-archives__header-title">
+				<h2>All Issues</h2>
+			</div>
+			<div class="issue-archives__header-search">
+				<form class="issue-archives__header-form">
+					<input class="issue-archives__header-button" type="button" value="Search">
+					<input class="issue-archives__header-bar" type="text" placeholder="Search..." required>					
+				</form>
+			</div>
+    	</div>
 		<div class="issue-archives__tabs">
             <ul class="issue-archives__tabs-list">
                 <li v-for="tab in archives" :key="tab.year + tab.volume" class="issue-archives__tabs-list-item">
@@ -55,6 +66,36 @@ export default {
 </script>
 
 <style lang="css">
+
+.issue-archives__header {
+	padding: 0;
+	margin: 0;
+}
+
+.issue-archives__header-title, .issue-archives__header-search {
+	padding: 0;
+	margin: 0;
+}
+
+.issue-archives__header-form {
+	width: 2rem;
+	margin: 1rem auto;
+	display: flex;
+}
+
+.search {
+	padding: 0;
+	margin: 0;
+	border: 1px solid;
+}
+
+.issue-archives__header-button {
+	position: relative;
+	padding: 0.5rem;
+	left: -0.2rem;
+	border: 2px solid;
+}
+
 .issue-archives__tabs {
 	border-bottom: 1px solid;
 }
@@ -96,7 +137,32 @@ export default {
 
 	.issue-archives {
 		display: flex;
+		flex-flow: row wrap;
 	}
+
+	.issue-archives > * {
+	  padding: 0 1rem;
+	  flex: 1 100%;
+	}
+
+	.issue-archives__tabs, .issue-archives__tab-panels { flex: 1 auto; }
+	.issue-archives__header { order: 1; }
+	.issue-archives__tabs { order: 2; }
+	.issue-archives__tab-panels { order: 3; }
+
+	.issue-archives__header {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+
+	.issue-archives__header > * {
+		flex: 1 0;
+	}
+
+	.issue-archives__header-title { order: 1; }
+	.issue-archives__header-search { order: 2; }
+
 
 	.issue-archives__tabs {
 		border-bottom: none;
