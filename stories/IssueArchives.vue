@@ -67,6 +67,10 @@ export default {
 
 <style lang="css">
 
+h1 {
+	font-size: 1.3rem;
+}
+
 .issue-archives__header {
     padding: 0;
     margin: 0;
@@ -79,7 +83,6 @@ export default {
 
 .issue-archives__header-form {
     width: 2rem;
-    margin: 0.5rem auto;
     display: flex;
 }
 
@@ -163,6 +166,10 @@ export default {
 
     .issue-archives__header > * {
         flex: 1 0;
+    }
+
+    .issue-archives__header-form {
+    	margin: 0.5rem auto;
     }
 
     .issue-archives__header-title { order: 1; }
