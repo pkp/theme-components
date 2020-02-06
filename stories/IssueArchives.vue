@@ -21,18 +21,24 @@
 			</div>
 		</div>
 		<div class="issue-archives__tabs">
-			<ul class="issue-archives__tabs-list">
+			<ul class="issue-archives__tabs-list" role="tablist">
 				<li
 					v-for="tab in archives"
 					:key="tab.year + tab.volume"
 					class="issue-archives__tabs-list-item"
+					role="presentation"
 				>
 					<button
 						:id="'issue-archive__button-' + tab.year"
+						:ref="'button' + tab.year"
 						class="issue-archives__button"
 						:aria-selected="activeTab.year === tab.year"
+						:tabindex="activeTab.year !== tab.year ? '-1' : '0'"
+						role="tab"
 						type="button"
 						@click="activeTab = tab"
+						@keyup.right="right()"
+						@keyup.left="left()"
 					>
 						<span class="issue-archives__button-text--year">
 							{{ tab.year }}
@@ -51,6 +57,8 @@
 				:key="tab.year + tab.volume"
 				:aria-labelledby="'issue-archives__button' + tab.year"
 				:hidden="activeTab.year !== tab.year"
+				tabindex="-1"
+				role="tabpanel"
 			>
 				<h2 class="-screen-reader">{{ year }}</h2>
 				<IssueSummary
@@ -75,6 +83,29 @@ export default {
 		return {
 			activeTab: 0
 		};
+	},
+	methods: {
+		right() {
+			const i = this.archives.findIndex(tab => this.activeTab.year === tab.year) + 1;
+			if (i > (this.archives.length - 1)) {
+				this.activeTab = this.archives[0];
+			} else {
+				this.activeTab = this.archives[i];
+			}
+		},
+		left() {
+			const i = this.archives.findIndex(tab => this.activeTab.year === tab.year) - 1;
+			if (i < 0) {
+				this.activeTab = this.archives[this.archives.length - 1];
+			} else {
+				this.activeTab = this.archives[i];
+			}
+		}
+	},
+	watch: {
+		activeTab(newVal) {
+			this.$refs['button' + newVal.year][0].focus();
+		}
 	},
 	mounted() {
 		this.activeTab = this.archives[0];
