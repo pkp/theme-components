@@ -70,6 +70,6 @@ export const base = () => ({
     }
   },
   template: `<issue-archives
-			:archives="archives"
-	/>`
+            :archives="archives"
+    />`
 });
