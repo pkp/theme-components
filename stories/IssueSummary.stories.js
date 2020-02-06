@@ -1,15 +1,15 @@
-import { withKnobs, radios, text } from '@storybook/addon-knobs';
-import IssueSummary from "./IssueSummary.vue";
-import issues from "./data/issues.js";
+import {withKnobs, radios, text} from '@storybook/addon-knobs';
+import IssueSummary from './IssueSummary.vue';
+import issues from './data/issues.js';
 
 export default {
-  title: "IssueSummary",
+	title: 'IssueSummary',
 	decorators: [withKnobs]
 };
 
 export const base = () => ({
-  components: { IssueSummary },
-  props: {
+	components: {IssueSummary},
+	props: {
 		volume: {
 			default: text('Volume', issues[0].volume)
 		},
@@ -23,15 +23,19 @@ export const base = () => ({
 			default: text('Date', issues[0].date)
 		},
 		image: {
-			default: radios('Cover Image', {
-				None: '',
-				Cover: issues[0].image,
-				WideImage: '1200x200.png',
-				TallImage: '200x1200.png'
-			}, '')
+			default: radios(
+				'Cover Image',
+				{
+					None: '',
+					Cover: issues[0].image,
+					WideImage: '1200x200.png',
+					TallImage: '200x1200.png'
+				},
+				''
+			)
 		}
-  },
-  template: `<issue-summary
+	},
+	template: `<issue-summary
 		:volume="volume"
 		:number="number"
 		:title="title"
