@@ -20,53 +20,55 @@
 				</form>
 			</div>
 		</div>
-		<div class="issue-archives__tabs">
-			<ul class="issue-archives__tabs-list" role="tablist">
-				<li
+		<div class="issue-archives__tab-wrapper">
+			<div class="issue-archives__tabs">
+				<ul class="issue-archives__tabs-list" role="tablist">
+					<li
+						v-for="tab in archives"
+						:key="tab.year + tab.volume"
+						class="issue-archives__tabs-list-item"
+						role="presentation"
+					>
+						<button
+							:id="'issue-archive__button-' + tab.year"
+							:ref="'button' + tab.year"
+							class="issue-archives__button"
+							:aria-selected="activeTab.year === tab.year"
+							:tabindex="activeTab.year !== tab.year ? '-1' : '0'"
+							role="tab"
+							type="button"
+							@click="activeTab = tab"
+							@keyup.right="right()"
+							@keyup.left="left()"
+						>
+							<span class="issue-archives__button-text--year">
+								{{ tab.year }}
+							</span>
+							<span class="issue-archives__button-text--separator">—</span>
+							<span class="issue-archives__button-text--volume">
+								Volume {{ tab.volume }}
+							</span>
+						</button>
+					</li>
+				</ul>
+			</div>
+			<div class="issue-archives__tab-panels">
+				<section
 					v-for="tab in archives"
 					:key="tab.year + tab.volume"
-					class="issue-archives__tabs-list-item"
-					role="presentation"
+					:aria-labelledby="'issue-archives__button' + tab.year"
+					:hidden="activeTab.year !== tab.year"
+					tabindex="-1"
+					role="tabpanel"
 				>
-					<button
-						:id="'issue-archive__button-' + tab.year"
-						:ref="'button' + tab.year"
-						class="issue-archives__button"
-						:aria-selected="activeTab.year === tab.year"
-						:tabindex="activeTab.year !== tab.year ? '-1' : '0'"
-						role="tab"
-						type="button"
-						@click="activeTab = tab"
-						@keyup.right="right()"
-						@keyup.left="left()"
-					>
-						<span class="issue-archives__button-text--year">
-							{{ tab.year }}
-						</span>
-						<span class="issue-archives__button-text--separator">—</span>
-						<span class="issue-archives__button-text--volume">
-							Volume {{ tab.volume }}
-						</span>
-					</button>
-				</li>
-			</ul>
-		</div>
-		<div class="issue-archives__tab-panels">
-			<section
-				v-for="tab in archives"
-				:key="tab.year + tab.volume"
-				:aria-labelledby="'issue-archives__button' + tab.year"
-				:hidden="activeTab.year !== tab.year"
-				tabindex="-1"
-				role="tabpanel"
-			>
-				<h2 class="-screen-reader">{{ year }}</h2>
-				<IssueSummary
-					v-for="issueSummary in tab.issues"
-					:key="issueSummary.volume + issueSummary.year"
-					v-bind="issueSummary"
-				/>
-			</section>
+					<h2 class="-screen-reader">{{ year }}</h2>
+					<IssueSummary
+						v-for="issueSummary in tab.issues"
+						:key="issueSummary.volume + issueSummary.year"
+						v-bind="issueSummary"
+					/>
+				</section>
+			</div>
 		</div>
 	</div>
 </template>
@@ -130,7 +132,6 @@ h1 {
 }
 
 .issue-archives__header-form {
-	width: 2rem;
 	display: flex;
 }
 
@@ -185,60 +186,27 @@ h1 {
 }
 
 @media (min-width: 767px) {
-	.issue-archives {
-		display: flex;
-		flex-flow: row wrap;
-	}
-
-	.issue-archives > * {
-		flex: 1 100%;
-	}
-
 	.issue-archives__tabs,
 	.issue-archives__tab-panels {
-		flex: 1 auto;
 		padding: 1rem;
 	}
-	.issue-archives__header {
-		order: 1;
-	}
-	.issue-archives__tabs {
-		order: 2;
-	}
+
 	.issue-archives__tab-panels {
-		order: 3;
 		padding: 1rem 0 1rem 2rem;
 	}
 
 	.issue-archives__header {
 		display: flex;
-		flex-flow: row wrap;
-		align-items: flex-end;
+		align-items: center;
 		border-bottom: 1px solid;
 	}
 
 	.issue-archives__header-search {
-		margin: 0;
-		padding: 0;
+		margin-left: auto;
 	}
 
-	.issue-archives__header > * {
-		flex: 1 0;
-	}
-
-	.issue-archives__header-form {
-		margin: 0.5rem auto;
-	}
-
-	.issue-archives__header-title {
-		order: 1;
-	}
-	.issue-archives__header-search {
-		order: 2;
-	}
-
-	.issue-archives__header-form {
-		align-items: self-end;
+	.issue-archives__tab-wrapper {
+		display: flex;
 	}
 
 	.issue-archives__tabs {
